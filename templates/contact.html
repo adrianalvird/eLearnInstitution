@@ -1,0 +1,147 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <title>eLearn Institution Contact Form</title>
+  </head>
+  <body>
+  
+  <div class="content">
+    
+    <div class="container">
+      <div class="row align-items-stretch no-gutters contact-wrap">
+        <div class="col-md-8">
+          <div class="form h-100">
+          
+            <h3>Send Us a Message</h3>
+            <form method="post" action="/contact/" class="mb-5" id="contactForm" name="contactForm">
+            {% csrf_token %}
+              <div class="row">
+                <div class="col-md-6 form-group mb-5">
+                  <label for="name" class="col-form-label">Full Name *</label>
+                  <input type="text" class="form-control" name="name" id="name" placeholder="Your name">
+                </div>
+                <div class="col-md-6 form-group mb-5">
+                  <label for="priemail" class="col-form-label">Email *</label>
+                  <input type="email" class="form-control" name="priemail" id="priemail"  placeholder="Your email">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 form-group mb-5">
+                  <label for="extemail" class="col-form-label">Secondary Email</label>
+                  <input type="email" class="form-control" name="extemail" id="extemail"  placeholder="Secondary Email ID">
+                </div>
+                <div class="col-md-6 form-group mb-5">
+                  <label for="jobdesc" class="col-form-label">Job Description</label>
+                  <input type="text" class="form-control" name="jobdesc" id="jobdesc"  placeholder="e.g;   ICSRO | Cyber Security Associate">
+                </div>
+              </div>
+		
+		<div class="row">
+                <div class="col-md-6 form-group mb-5">
+                  <label for="resume" class="col-form-label">Plsease Send CV / Resume</label>
+                  <input type="file" class="form-control" name="resume" id="resume"  placeholder="Upload Resume Here">
+                </div>
+                <div class="col-md-6 form-group mb-5">
+                  <label for="date" class="col-form-label">Date Of Birth</label>
+                  <input type="date" class="form-control" name="date" id="date"  placeholder="Date Of Birth">
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-md-6 form-group mb-5">
+                  <label for="photo" class="col-form-label">Plsease Upload Your Photo</label>
+                  <input type="file" class="form-control" name="photo" id="photo"  placeholder="Upload Photo Here">
+                </div>
+                <div class="col-md-6 form-group mb-5">
+                  <label for="phone" class="col-form-label">Phone Number</label>
+                  <input type="phone" class="form-control" name="phone" id="phone"  placeholder="+XX XXXXXXXXXX">
+                </div>
+              </div>
+              
+              
+              <div class="row">
+                <div class="col-md-6 form-group mb-5">
+                  <label for="country" class="col-form-label">Country</label>
+                  <input type="text" class="form-control" name="country" id="country"  placeholder="Country Name">
+                </div>
+                <div class="col-md-6 form-group mb-5">
+                  <label for="address" class="col-form-label">Address</label>
+                  <input type="text" class="form-control" name="address" id="address"  placeholder="Your Address">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12 form-group mb-5">
+                  <label for="message" class="col-form-label">Message *</label>
+                  <textarea class="form-control" name="message" id="message" cols="30" rows="4"  placeholder="Write your message"></textarea>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 form-group">
+                  <input type="submit" value="Send Message" class="btn btn-primary rounded-0 py-2 px-4">
+                  <span class="submitting"></span>
+                </div>
+              </div>
+            </form>
+
+            <div id="form-message-warning mt-4"></div> 
+            <div id="form-message-success">
+              Your message was sent, thank you!
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="contact-info h-100">
+            <h3>eLearn Institution</h3>
+            <p class="mb-5">Open Source Free Education Platform , Seed --> Plant --> Larger --> Greater</p>
+            <p class="mb-5">Your 10 Minutes can change someone's entire Life , Help Others </p>
+            <p class="mb-5">If Education meets Business , Both Will Destroy Completely ...  </p>
+            <p class="mb-5">Show Interest If You Really want to Teach For Free Education , or support us in different ways </p>
+            <p class="mb-5">There are many Extraordinary student, but couldn't complete education, or lose in race  due to hugh demand private institution and also online education ed-tech platform.. and everyone knows how  Govt education system is..</p>
+           
+            <ul class="list-unstyled">
+              <li class="d-flex">
+                <span class="wrap-icon icon-room mr-3"></span>
+                <span class="text">Kolkata , West Bengal</span>
+              </li>
+              <li class="d-flex">
+                <span class="wrap-icon icon-phone mr-3"></span>
+                <span class="text">At this time Not Available</span>
+              </li>
+              <li class="d-flex">
+                <span class="wrap-icon icon-envelope mr-3"></span>
+                <span class="text">elearninstitution@gmail.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.validate.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+  </body>
+</html>
