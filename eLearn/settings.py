@@ -27,7 +27,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     'elearninstitution.herokuapp.com'
-    'elearninstitution.cf'
+    
 ]
 
 
